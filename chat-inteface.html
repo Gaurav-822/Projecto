@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <script defer src="http://localhost:80/socket.io/socket.io.js"></script>
+    <script defer src="JS/client.js"></script>
+    <script
+      src="https://kit.fontawesome.com/db21924de1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="interface-style.css">
+</head>
+<body>
+    <nav>
+        <img class="logo" src="logo1.png" alt="">
+        <h1>Projecto Chat Environment</h1>
+    </nav>
+    <div class="container">
+        <div class="contact">
+            <i class="fa-solid fa-phone fa-2xl"></i>
+            <i class="fa-solid fa-video fa-2xl"></i>
+        </div>
+        <!-- <div class="message left">Pragyan: Hey how are you?</div>
+        <div class="message right">Raju: I am fine</div> -->
+    </div>
+    <div class="send">
+        <form action="#" id="send-container">
+            <input type="text" name="messageInp" id="messageInp" placeholder="Type Your Message Here">
+            <button class="btn" type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
