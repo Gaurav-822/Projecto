@@ -35,6 +35,13 @@ users = Table(
     Column('exclusive', Integer),   # 0 for normal patients and other numbers for different staffs(future scope), now only 1 for official staffs 
 )
 
+messages = Table(
+    'messages', meta,
+    Column('u_id', Integer),
+    Column('r_id', Integer),
+    Column('msg', Text),
+)
+
 meta.create_all(engine)
 
 @app.after_request
