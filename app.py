@@ -88,9 +88,11 @@ def register():
 @app.route("/project_env")
 # @login_required
 def project_env():
-    if session['user_id'] == False:
+    try:
+        if session['user_id']:
+            return render_template("after-login.html")
+    except:
         return render_template("before-login.html")
-    return render_template("after-login.html")
 
 
 @app.route("/login", methods=['GET', 'POST'])

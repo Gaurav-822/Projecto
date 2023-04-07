@@ -37,6 +37,8 @@
   }
   .left img {
     clip-path: circle();
+    height: 4rem;
+  width: 4rem;
   }
   .left p {
     color: white;

@@ -2,26 +2,6 @@
  <html lang="en">
     <head>
         <title>PROJECTO</title>
-        <!-- Get Bootstrap
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        Get google fonts
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800;900&display=swap" rel="stylesheet">
-        Get W3schools css
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-        <!-- Specifing the character encoding -->
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <!-- Icon -->
@@ -46,16 +26,22 @@
                 <p style="font-size: 1.4rem;">PROJECTO</p>
             </div>
             <div class="middle" id="middle">
-                <a href="/">Home</a>
-                <a href="">About</a>
-                <a href="">Contacts</a>
+                <a href="/" style="text-decoration: none;">Home</a>
+                <a href="" style="text-decoration: none;">About</a>
+                <a href="" style="text-decoration: none;">Contacts</a>
             </div>
             <div class="right">
                 {% if session['user_id'] %}
                 <a href="/logout"><button class="btn">Logout</button></a>
                 {% else %}
-                <a href="/login"><button class="btn">Login</button></a>
-                <a href="/register"><button class="btn">Register</button></a>
+                <a href="/login"><button class="btn" style=" background: transparent;
+                    border: 2px solid white;
+                    color: white;
+                    box-shadow: 0px 1px 10px 0px white;">Login</button></a>
+                <a href="/register"><button class="btn" style=" background: transparent;
+                    border: 2px solid white;
+                    color: white;
+                    box-shadow: 0px 1px 10px 0px white;">Register</button></a>
                 {% endif %}
             </div>
         </nav>

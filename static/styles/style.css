@@ -35,13 +35,15 @@ body{
 }
 .left {
   display: flex;
-  column-gap: 1rem;
+  column-gap: 0.5rem;
   align-items: center;
   justify-content: center;
   margin-right: -3rem;
 }
 .left img {
   clip-path: circle();
+  height: 4rem;
+  width: 4rem;
 }
 .left p {
   color: white;
