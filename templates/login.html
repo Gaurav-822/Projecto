@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block style %}
+        <!-- Getting the background image -->
+        <link rel="stylesheet" href="/static/styles/style.css">
+
+        <!-- Get Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- Get google fonts
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> -->
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800;900&display=swap" rel="stylesheet">
+        <!-- Get W3schools css -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock %}
+
+{% block main %}
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="left">
+        <img src="/static/images/image-jonathan.jpg" alt="">
+        <p style="font-size: 1.4rem;">PROJECTO</p>
+    </div>
+    <div class="middle"><a href="/">Back To Home Page</a></div>
+    <div class="right">
+        <a href="/login"><button class="btn">Login</button></a>
+        
+        <a href="/register"><button class="btn">Register</button></a>
+    </div>
+</nav>
+
+
+<div class="black">
+<form action="/login" class="w3-container w3-round-large w3-light-grey" method="post">
+    <div class="w3-panel">
+        <h1>LOGIN</h1>
+    </div>
+    <!-- <div class="w3-panel"> -->
+    <div class="w3-container">
+        <i class="glyphicon glyphicon-user"></i>
+        <input autofocus autocomplete="off" class="w3-input w3-border w3-animate-input" style="width:40%; color: black;" id="username" name="username" placeholder="Username" type="text">
+    </div>
+    <!-- </div> -->
+    <!-- <div class="w3-panel"> -->
+    <div class="w3-container">
+        <i class="glyphicon glyphicon-lock"></i>
+        <input class="w3-input w3-border w3-animate-input" style="width:60%; color: black;" id="password" name="password" placeholder="Password" type="password">
+    </div>
+    <!-- </div> -->
+    <div class="w3-panel">
+    <button class="w3-button w3-round-large w3-pale-blue" type="submit">Log In</button>
+    </div>
+</form>
+</div>
+{% endblock %}

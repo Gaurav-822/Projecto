@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <table class="table">
+        <tr>
+            <td>Sl.No.</td>
+            <td>Problem</td>
+            <td>Med</td>
+            <td>DOCTOR NUMBER</td>
+        </tr>
+        {% for i in range(loop) %}
+        <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ problems[i] }}</td>
+            <td>{{ med[i] }}</td>
+            <td>{{ doc_id[i] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

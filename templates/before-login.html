@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block style %}
+<link rel="stylesheet" href="/static/styles/style.css">
+{% endblock %}
+
+{% block main %}
+<nav class="navbar">
+    <div class="left">
+        <img src="/static/images/image-jonathan.jpg" alt="">
+        <p style="font-size: 1.4rem;">PROJECTO</p>
+    </div>
+    <div class="middle"><a href="/">Back To Home Page</a></div>
+    <div class="right">
+        <a href="/login"><button class="btn">Login</button></a>
+        
+        <a href="/register"><button class="btn">Register</button></a>
+    </div>
+</nav>
+<section class="section-1">
+    <div class="section-1-left"><img src="/static/images/icons8-back-64.png" alt=""></div>
+    <div class="section-1-middle">
+        <div class="section-1-middle-part-1"><h1 id="primary-heading">Projects</h1></div>
+        <p id="paragraph" style="font-size: 1.8rem;">Login First To Access This Section
+            
+        </p>
+        <div class="section-1-middle-part-2"><a href="/login"><button class="btn-1">Login To Access Projects</button></a></div>
+
+    </div>
+    <div class="section-1-right"><img src="/static/images/icons8-forward-64.png" alt=""></div>
+
+</section>
+{% endblock %}
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <img src="image-jonathan.jpg" alt="">
+            <p style="font-size: 1.4rem;">PROJECTO</p>
+        </div>
+        <div class="middle"><a href="landing-page.html">Back To Home Page</a></div>
+        <div class="right">
+            <button class="btn">Login</button>
+            <button class="btn">Register</button>
+        </div>
+    </nav>
+    <section class="section-1">
+        <div class="section-1-left"><img src="icons8-back-64.png" alt=""></div>
+        <div class="section-1-middle">
+            <div class="section-1-middle-part-1"><h1 id="primary-heading">Projects</h1></div>
+            <p id="paragraph" style="font-size: 1.8rem;">Login First To Access This Section
+                
+            </p>
+            <div class="section-1-middle-part-2"><button class="btn-1">Login To Access Projects</button></div>
+
+        </div>
+        <div class="section-1-right"><img src="icons8-forward-64.png" alt=""></div>
+
+    </section>
+</body>
+</html>
+
+-->

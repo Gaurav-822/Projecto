@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background: url('/static/images/background.jpg') no-repeat center/cover;
+  background-attachment: fixed;
+}
+/* Before-Login Page */
+.navbar {
+  position: fixed;
+  
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid red; */
+  padding-inline: 2rem;
+  background: transparent;
+  backdrop-filter: blur(54px);
+}
+.navbar::before {
+  content: "";
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  z-index: -1;
+  /* opacity: 0.8; */
+}
+.left {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-right: -3rem;
+}
+.left img {
+  clip-path: circle();
+}
+.left p {
+  color: white;
+}
+.middle a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: white;
+}
+.middle a:hover {
+  /* color: blue; */
+  opacity: 0.8;
+  /* border-bottom: 2px solid red; */
+}
+.btn {
+  height: 2.6rem;
+  width: 8rem;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.btn:hover{
+  opacity: 0.8;
+  
+}
+.section-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  height: 45.1rem;
+  width: 100%;
+  column-gap: 4rem;
+  /* background: url('background.jpg') no-repeat center/cover; */
+  
+  padding-top: 3.2rem;
+}
+.section-1-left img,
+.section-1-right img {
+  cursor: pointer;
+  filter: invert(100%);
+}
+.section-1-right img:hover {
+  transform: translateX(1rem);
+  /* filter: invert(0%); */
+}
+.section-1-left img:hover {
+  transform: translateX(-1rem);
+  /* filter: invert(0%); */
+}
+.section-1-middle {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 11rem;
+  height: 33rem;
+  width: 56rem;
+  padding: 2rem;
+  border-radius: 30px;
+  background-color: black;
+  opacity: 0.8;
+}
+.section-1-middle-part-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 4rem;
+  border-bottom: 2px solid white;
+}
+#primary-heading,
+#paragraph {
+  color: white;
+}
+#paragraph {
+  text-align: center;
+  /* border: 2px solid white; */
+  border-block: none;
+}
+
+.btn-1 {
+  height: 3rem;
+  width: 13rem;
+  border-radius: 7px;
+  cursor: pointer;
+
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  box-shadow: 0px 1px 10px 0px white;
+}
+.btn-1:hover {
+  font-size: 0.8rem;
+  box-shadow: 0px 1px 10px 0px rgb(247, 103, 0);
+}
+
+
+/* After-Login Page */
+.right{
+    display: flex;
+    column-gap: 2rem;
+    
+}
+.right-part-1{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+}
+#right-part-1{
+    display: flex;
+    column-gap: 1rem;
+}
+#right-part-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    
+}
+#user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid rgb(0, 0, 0); */
+    height: 3rem;
+    width: 3rem;
+    border-radius: 28px;
+    background-color: white;
+
+}
+
+
+.landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4rem;
+}
+
+#section-1-left img{
+  height: 30rem;
+  width: 30rem;
+}
+#section-1-right{
+  color: white;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+#section-1-right h1{
+ font-size: 3rem;
+}
+#section-1-right p{
+ font-size: 1.2rem;
+}
+#btn-1,#btn-2{
+  background-color: transparent;
+  border: 2px solid white;
+  height: 3rem;
+  color: white;
+  width: 13rem;
+  font-size: 1rem;
+}
+#btn-1:hover,#btn-2:hover{
+  border-radius: 7px;
+  background-color: #ff0000;
+  border: 2px solid red;
+  transition: 500ms;
+}
+.buttons{
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: left; */
+  column-gap: 1rem;
+}
+#middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3rem;
+  
+}
+#middle a{
+  font-size: 1.3rem;
+}
+
+#section-3 h1{
+  color: white;
+  font-size: 2rem;
+}
+
+#section-3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4rem;
+}
+
+#photos img{
+  height: 30rem;
+  width: 40rem;
+}
+#photos{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+}
