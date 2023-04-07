@@ -35,21 +35,6 @@ users = Table(
     Column('exclusive', Integer),   # 0 for normal patients and other numbers for different staffs(future scope), now only 1 for official staffs 
 )
 
-inventory = Table(
-    'inventory', meta,
-    Column('m_id', Integer, primary_key = True),
-    Column('m_name', Text),
-    Column('m_quantity', Integer),
-)
-
-p_history = Table(
-    "p_history", meta,
-    Column('p_id', Integer),
-    Column('d_id', Integer),
-    Column('problem', Text),
-    Column('med', Text),
-)
-
 meta.create_all(engine)
 
 @app.after_request
