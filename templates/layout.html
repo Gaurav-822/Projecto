@@ -1,7 +1,7 @@
 <!DOCTYPE html>
  <html lang="en">
     <head>
-        <title>Cringe Moments</title>
+        <title>PROJECTO</title>
         <!-- Get Bootstrap
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -35,10 +35,33 @@
                   background-attachment: fixed;
               }  
       </style>
-        <!-- <link rel="stylesheet" href="/static/styles.css"> -->
     </head>
 
     <body>
+        <!-- NAVBAR -->
+        {% if nav == 1 %}
+        <nav class="navbar">
+            <div class="left">
+                <img src="/static/images/image-jonathan.jpg" alt="">
+                <p style="font-size: 1.4rem;">PROJECTO</p>
+            </div>
+            <div class="middle" id="middle">
+                <a href="/">Home</a>
+                <a href="">About</a>
+                <a href="">Contacts</a>
+            </div>
+            <div class="right">
+                {% if session['user_id'] %}
+                <a href="/logout"><button class="btn">Logout</button></a>
+                {% else %}
+                <a href="/login"><button class="btn">Login</button></a>
+                <a href="/register"><button class="btn">Register</button></a>
+                {% endif %}
+            </div>
+        </nav>
+        {% endif %}
+
+
         {% block main %}{% endblock %}
     </body>
  </html>

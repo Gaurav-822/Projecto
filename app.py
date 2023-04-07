@@ -63,13 +63,7 @@ def after_request(response):
 # HOME PAGE ----------------------------------------
 @app.route("/")
 def home():
-    # s = users.select().where(users.c.id == session['user_id'])
-    # result = conn.execute(s)
-    # for row in result:
-    #     req = row[3]
-    #     if req == None:
-    #         req = 0
-    return render_template('landing-page.html')
+    return render_template('landing-page.html', nav=1)
 #---------------------------------------------------
 
 # LOGIN and REGISTER ----------------------------------------------
@@ -80,7 +74,7 @@ def register():
     session.clear()
 
     if request.method == "GET":
-        return render_template("register.html")
+        return render_template("register.html", nav=1)
     username = request.form.get('username')
     password = request.form.get('password')
     confirmation = request.form.get('confirmation')
@@ -104,6 +98,13 @@ def register():
 
     session['user_id'] = id
 
+    return render_template("after-login.html")
+
+@app.route("/project_env")
+# @login_required
+def project_env():
+    if session['user_id'] == False:
+        return render_template("before-login.html")
     return render_template("after-login.html")
 
 
@@ -132,7 +133,7 @@ def login():
         return apology('Sorry We cannot find you right now')
     
     else:
-        return render_template("login.html")
+        return render_template("login.html", nav=1)
     
 @app.route("/logout")
 def logout():
