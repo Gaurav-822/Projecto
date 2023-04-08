@@ -22,13 +22,14 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Making connection to the database
-engine = create_engine("sqlite:///data.db", echo = False, connect_args={"check_same_thread": False})
+# engine = create_engine("sqlite:///data.db", echo = False, connect_args={"check_same_thread": False})
+engine = create_engine("postgresql://tafri_sql_lxri_user:ut2qqD0kZbrvnddaiMzRJWA4Ztc1dOkv@dpg-cg66s55269v5l651uo5g-a.singapore-postgres.render.com/tafri_sql_lxri", echo = False)
 conn = engine.connect()
 
 # Make Tables:
 meta = MetaData()
-users = Table(
-    'users', meta,
+projecto_users = Table(
+    'projecto_users', meta,
     Column('id', Integer, primary_key = True),
     Column('username', Text),
     Column('hash', Text),
@@ -71,7 +72,7 @@ def register():
     password = request.form.get('password')
     confirmation = request.form.get('confirmation')
 
-    user = text('SELECT username, id FROM users')
+    user = text('SELECT username, id FROM projecto_users')
     result = conn.execute(user)
     u_l = []
     id = 0
@@ -84,8 +85,8 @@ def register():
     if password == '' or password != confirmation:
         return apology('Password input is blank or the passwords do not match.')
 
-    # id = db.execute('INSERT INTO users(username, hash) VALUES(?, ?)', username, generate_password_hash(password))
-    ins = users.insert().values(username = username, hash = generate_password_hash(password), exclusive = 0)
+    # id = db.execute('INSERT INTO projecto_users(username, hash) VALUES(?, ?)', username, generate_password_hash(password))
+    ins = projecto_users.insert().values(username = username, hash = generate_password_hash(password), exclusive = 0)
     conn.execute(ins)
 
     session['user_id'] = id
@@ -116,7 +117,7 @@ def login():
         
         # Query database for username
         #Can make better
-        user = text('SELECT username, hash, id FROM users')
+        user = text('SELECT username, hash, id FROM projecto_users')
         result = conn.execute(user)
         for row in result:
             if row[0] == request.form.get("username"):
