@@ -22,8 +22,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Making connection to the database
-# engine = create_engine("sqlite:///data.db", echo = False, connect_args={"check_same_thread": False})
-engine = create_engine("postgresql://tafri_sql_lxri_user:ut2qqD0kZbrvnddaiMzRJWA4Ztc1dOkv@dpg-cg66s55269v5l651uo5g-a.singapore-postgres.render.com/tafri_sql_lxri", echo = False)
+engine = create_engine("sqlite:///data.db", echo = False, connect_args={"check_same_thread": False})
 conn = engine.connect()
 
 # Make Tables:
